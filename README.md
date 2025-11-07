@@ -28,5 +28,3 @@ Este é um site estático, construído do zero, que serve como meu cartão de vi
 | **Ícones** | Font Awesome | Ícones de redes sociais (LinkedIn, Instagram). |
 
 ---
-
-## 📂 Estrutura do Repositório
