@@ -1,0 +1,30 @@
+$color-background: #0a192f;
+
+$color-text-primary: #e6f1ff;
+$color-text-secondary: #a8b2d1;
+
+$color-accent: #3b82f6;
+
+$color-card-background: #112240;
+
+$font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  Helvetica, Arial, sans-serif;
+$font-mono: "SF Mono", "Fira Code", "Roboto Mono", monospace;
+
+$font-size-base: 16px;
+$font-size-sm: 0.875rem;
+$font-size-md: 1rem;
+$font-size-lg: 1.125rem;
+
+$font-size-h1: 2.5rem;
+$font-size-h2: 2rem;
+$font-size-h3: 1.5rem;
+
+$spacing-base: 1rem;
+$spacing-sm: $spacing-base * 0.5;
+$spacing-md: $spacing-base * 1.5;
+$spacing-lg: $spacing-base * 2;
+$spacing-xl: $spacing-base * 3;
+
+$container-width: 960px;
+$border-radius: 4px;

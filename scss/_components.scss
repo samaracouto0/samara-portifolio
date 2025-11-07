@@ -1,0 +1,113 @@
+.project-card {
+  background-color: $color-card-background;
+  padding: $spacing-md;
+  border-radius: $border-radius;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+
+  h3 {
+    color: $color-text-primary;
+    margin-bottom: $spacing-sm;
+  }
+
+  p {
+    color: $color-text-secondary;
+  }
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-base;
+  max-width: 600px;
+  margin: 0 auto;
+
+  input,
+  textarea {
+    background-color: $color-card-background;
+    border: 1px solid $color-card-background;
+    color: $color-text-primary;
+    padding: $spacing-base;
+    border-radius: $border-radius;
+    transition: border-color 0.3s;
+
+    &:focus {
+      border-color: $color-accent;
+      outline: none;
+    }
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 150px;
+  }
+
+  button[type="submit"] {
+    background-color: $color-accent;
+    color: $color-background;
+    padding: $spacing-base $spacing-md;
+    border: none;
+    border-radius: $border-radius;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: darken($color-accent, 10%);
+    }
+  }
+}
+
+.form-status-message {
+  color: $color-accent;
+  font-size: $font-size-md;
+  text-align: center;
+  padding: $spacing-sm;
+  margin-top: $spacing-base;
+  border: 1px solid $color-accent;
+  border-radius: $border-radius;
+  display: none;
+}
+
+.form-status-message.show {
+  display: block;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: $color-accent;
+  color: $color-background;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  line-height: 50px;
+  text-align: center;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.8);
+  transition: all 0.3s ease-in-out;
+  z-index: 990;
+
+  &::after {
+    content: "↑";
+    display: block;
+    line-height: 50px;
+  }
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}

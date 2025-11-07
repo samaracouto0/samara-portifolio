@@ -1,0 +1,14 @@
+// 1. Variáveis (sempre primeiro)
+@import "variables";
+
+// 2. Estilos base (Reset, tipografia, body)
+@import "base";
+
+// 3. Layout (Header, containers, etc.)
+@import "layout";
+
+// 4. Componentes (Botões, cards, formulários)
+@import "components";
+
+// 5. Estilos das seções específicas
+@import "sections";

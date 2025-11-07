@@ -1,0 +1,144 @@
+.container {
+  width: 90%;
+  max-width: $container-width;
+  margin: 0 auto;
+}
+
+.header {
+  padding: $spacing-lg 0;
+
+  .container {
+    text-align: center;
+  }
+
+  &__title {
+    color: $color-text-primary;
+    font-size: $font-size-h1;
+  }
+
+  &__subtitle {
+    color: $color-accent;
+    font-family: $font-mono;
+    font-size: $font-size-lg;
+    margin-bottom: $spacing-md;
+  }
+
+  &__nav {
+    ul {
+      display: flex; // Links lado a lado
+      justify-content: center;
+      gap: $spacing-md;
+    }
+
+    a {
+      color: $color-text-secondary;
+      font-weight: 600;
+      padding: $spacing-sm;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        color: $color-accent;
+        filter: none;
+      }
+    }
+  }
+}
+
+.hamburger-btn {
+  display: none !important;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+  padding: $spacing-sm;
+  position: absolute;
+  top: $spacing-md;
+  right: $spacing-base;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger-btn span {
+  display: block;
+  width: 24px;
+  height: 3px;
+  margin: 5px 0;
+  background-color: $color-accent;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+// Animação para o 'X'
+.hamburger-btn.menu-open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger-btn.menu-open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger-btn.menu-open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: $spacing-md 0;
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  .header__nav {
+    display: none;
+  }
+
+  .hamburger-btn {
+    display: block !important;
+    top: $spacing-lg;
+    right: $spacing-base;
+  }
+
+  .header__nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: $color-card-background;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: $spacing-base 0;
+    z-index: 999;
+
+    ul {
+      flex-direction: column;
+      text-align: center;
+      gap: $spacing-base;
+      padding: 0;
+    }
+  }
+
+  .header__nav.menu-open {
+    display: block;
+  }
+}
+.about__media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto $spacing-lg auto;
+}
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: $spacing-lg;
+  a {
+    color: $color-text-primary;
+    font-size: 2rem;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+}
